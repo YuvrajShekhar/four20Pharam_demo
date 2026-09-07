@@ -7,9 +7,14 @@ from sqlalchemy.orm import sessionmaker
 # Postgres connection string Railway provides and this switches automatically.
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./btm_register.db")
 
-# Railway/Heroku-style URLs sometimes start with postgres:// - SQLAlchemy needs postgresql://
+# Railway/Heroku-style URLs come as postgres:// or postgresql://. SQLAlchemy needs
+# an explicit driver in the scheme - we use psycopg (v3), which has prebuilt wheels
+# for current Python versions (unlike psycopg2-binary, which fails to build on
+# Railway's newer Python images since it has no matching prebuilt wheel there).
 if DATABASE_URL.startswith("postgres://"):
-    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql+psycopg://", 1)
+elif DATABASE_URL.startswith("postgresql://"):
+    DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+psycopg://", 1)
 
 connect_args = {"check_same_thread": False} if DATABASE_URL.startswith("sqlite") else {}
 
