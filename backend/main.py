@@ -22,7 +22,7 @@ app = FastAPI(
 # Wide open for local dev / POC purposes. Tighten before any real production use.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://four20pharamdemo-production.up.railway.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
