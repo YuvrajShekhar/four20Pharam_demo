@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node node_modules/vite/bin/vite.js build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "start": "vite preview --host 0.0.0.0 --port $PORT"
+    "start": "node node_modules/vite/bin/vite.js preview --host 0.0.0.0 --port $PORT"
   },
   "dependencies": {
     "react": "^19.2.8",
