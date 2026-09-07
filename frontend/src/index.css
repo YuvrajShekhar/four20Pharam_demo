@@ -1,0 +1,169 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f6f8;
+  color: #1a1a1a;
+}
+
+#root {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e4e8;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 15px;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #444;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.field label {
+  font-size: 12px;
+  color: #666;
+}
+
+input, select, textarea {
+  padding: 8px 10px;
+  border: 1px solid #ccced4;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #1f6e43;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  height: 37px;
+}
+
+button:hover {
+  background: #17532f;
+}
+
+button:disabled {
+  background: #a8a8a8;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #b3261e;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.balance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.balance-item {
+  background: #f5f6f8;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.balance-item .label {
+  font-size: 11px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.balance-item .value {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.balance-item.current .value {
+  color: #1f6e43;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #eceef1;
+}
+
+th {
+  color: #777;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge.RECEIPT { background: #e2f3e8; color: #1f6e43; }
+.badge.DISPENSE { background: #fdeee0; color: #a15c1f; }
+.badge.DISPOSAL { background: #fce4e4; color: #b3261e; }
+.badge.ADJUSTMENT { background: #e6e9f5; color: #3949a3; }
+
+.empty {
+  color: #999;
+  font-size: 13px;
+  padding: 10px 0;
+}
