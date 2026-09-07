@@ -107,7 +107,7 @@ function App() {
       <h1>BtM Digital Register</h1>
       <p className="subtitle">
         Append-only narcotics stock ledger with running balance reconciliation. No entry can ever be
-        edited or deleted &mdash; corrections are logged as new ADJUSTMENT entries, mirroring the
+        edited or deleted - corrections are logged as new ADJUSTMENT entries, mirroring the
         auditability required under BtMG/BtMVV recordkeeping.
       </p>
 
@@ -169,7 +169,7 @@ function App() {
 
       {balance && (
         <div className="card">
-          <h2>Balance &mdash; {selectedProduct?.name}</h2>
+          <h2>Balance - {selectedProduct?.name}</h2>
           <div className="balance-grid">
             <div className="balance-item">
               <div className="label">Receipts</div>

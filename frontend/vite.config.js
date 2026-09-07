@@ -11,4 +11,4 @@ export default defineConfig({
     // deployment you'd pin this to the exact known domain instead.
     allowedHosts: true,
   },
-})
+})  
